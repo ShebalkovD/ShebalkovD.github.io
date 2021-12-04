@@ -1,2 +1,2 @@
-# ShebalkovD.github.io
+# Денис Шебалков
 ДЗ Курс AndrewBrown
