@@ -1,0 +1,266 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.body {
+  font-family: Calibri, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #3f495a;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container2 {
+  max-width: 920px;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section__title {
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #233042;
+  font-family: Franklin Gothic Medium;
+}
+
+.line {
+  height: 4px;
+  width: 72px;
+  background-color: #d17700;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/src/images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+.header__nav {
+  width: 100%;
+  height: 60px;
+  background-color: #344051;
+  color: #fff;
+}
+.header__nav__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+.header__nav__logo {
+  font-size: 24px;
+  font-weight: 400;
+}
+.header__nav__list {
+  max-width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__nav__list-item {
+  font-size: 16px;
+  margin: 0 10px;
+}
+.header__inner {
+  margin-top: 35vh;
+  max-width: 570px;
+  text-align: center;
+}
+.header__inner-title {
+  font-size: 80px;
+  color: #233042;
+  font-family: Franklin Gothic Medium;
+  margin-bottom: 30px;
+}
+.header__inner-subtitle {
+  margin-bottom: 60px;
+  color: #79818c;
+  font-size: 20px;
+}
+.header__inner__btn {
+  font-family: Franklin Gothic Medium;
+  background-color: transparent;
+  border: 2px solid #6d7682;
+  color: #6f707e;
+  padding: 4px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5%;
+  font-weight: 400;
+  margin: 0 8px;
+}
+
+.about {
+  text-align: center;
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about__img {
+  height: 200px;
+  width: 200px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.about__text {
+  max-width: 800px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.about__btn {
+  font-family: Franklin Gothic Medium;
+  background-color: transparent;
+  border: 2px solid #6d7682;
+  color: #6f707e;
+  padding: 8px 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5%;
+  font-weight: 400;
+}
+.about__btn-img {
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+}
+
+.skills {
+  padding: 100px 0;
+  text-align: center;
+  background-image: url(/src/images/skills--bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+.skills__list {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills__list__item {
+  width: 212px;
+}
+.skills__list__item-img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 35px;
+}
+.skills__list__item-title {
+  color: #d17700;
+  font-family: Bahnschrift;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.case {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.case__subtitle {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.case__slider {
+  margin: 0 auto;
+}
+.case__slider-img {
+  max-width: 1200px;
+  height: 600px;
+}
+.case__inner {
+  margin-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+}
+.case__inner__info {
+  margin-right: 80px;
+  max-width: 220px;
+}
+.case__inner__info-title {
+  font-size: 25px;
+  color: #233042;
+  font-family: Franklin Gothic Medium;
+  margin-bottom: 10px;
+}
+.case__inner__info-subtitle {
+  margin-bottom: 20px;
+}
+.case__inner__info-btn {
+  font-family: Franklin Gothic Medium;
+  background-color: #63b5ae;
+  border: 2px solid #63b5ae;
+  color: #fff;
+  padding: 8px 35px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5%;
+  font-weight: 400;
+}
+.case__inner__project-title {
+  font-size: 25px;
+  color: #233042;
+  font-family: Franklin Gothic Medium;
+  margin-bottom: 10px;
+}
+.case__inner__project-text {
+  font-size: 20px;
+}
+.case__price {
+  font-size: 44px;
+  color: #233042;
+  margin-bottom: 60px;
+}
+.case__price-title {
+  font-size: 30px;
+  color: #233042;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.case__price__dd {
+  padding: 15px 10px;
+  background-color: #eeeeee;
+  width: 100%;
+  margin-bottom: 50px;
+}

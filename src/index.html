@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Page</title>
 </head>
 <body>
     
     <header class="header">
-        <div class="container">
+        
+        <div class="header__nav">
+            <div class="container">
+                <div class="header__nav__inner">
+                    <a href=""  class="header__nav__logo">Андрей Браун</a>
 
-            <div class="header__nav">
-
-                <p class="logo">Андрей Браун</p>
-
-                <ul class="header__nav__list">
-                    <li class="header__nav__list-item">ОБО МНЕ</li>
-                    <li class="header__nav__list-item">УСЛУГИ</li>
-                    <li class="header__nav__list-item">КЕЙСЫ</li>
-                    <li class="header__nav__list-item">ПРАЙС</li>
-                    <li class="header__nav__list-item">ОТЗЫВЫ</li>
-                    <li class="header__nav__list-item">КОНТАКТЫ</li>
-                </ul> 
-
+                    <ul class="header__nav__list">
+                        <li class="header__nav__list-item"><a href="">ОБО МНЕ</a></li>
+                        <li class="header__nav__list-item"><a href="">УСЛУГИ</a></li>
+                        <li class="header__nav__list-item"><a href="">КЕЙСЫ</a></li>
+                        <li class="header__nav__list-item"><a href="">ПРАЙС</a></li>
+                        <li class="header__nav__list-item"><a href="">ОТЗЫВЫ</a></li>
+                        <li class="header__nav__list-item"><a href="">КОНТАКТЫ</a></li>
+                    </ul> 
+                </div>
             </div>
+        </div>
 
+        <div class="container">
             <div class="header__inner">
 
                 <h1 class="header__inner-title">
@@ -40,8 +44,8 @@
                 <button class="header__inner__btn"><a href="">Мои работы</a></button>
 
             </div>
-
         </div> 
+        
     </header>
 
     <section class="about">
@@ -51,14 +55,14 @@
 
             <div class="line"></div>
 
-         <img src="" alt="" class="about__img">
+         <img src="/src/images/guy.png" alt="" class="about__img">
 
             <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in id, excepturi rem fugiat adipisci ad quisquam consequuntur vero repudiandae exercitationem numquam. Fuga inventore minus ratione adipisci ipsa perferendis incidunt.</p>
             <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in id, excepturi rem fugiat adipisci ad quisquam consequuntur vero repudiandae exercitationem numquam. Fuga inventore minus ratione adipisci ipsa perferendis incidunt.</p>
 
-            <button class="about__inner__btn">
-                <a href="">
-                 <img src="" alt="" class="about__inner__btn-img">
+            <button class="about__btn">
+                <a href="#">
+                 <img src="/src/images/download.svg" alt="" class="about__btn-img">
                  Скачать резюме
                  </a>
             </button>
@@ -69,74 +73,112 @@
     <section class="skills">
         <div class="container">
 
+            <h3 class="section__title">ЧТО Я УМЕЮ</h3>
+
+            <div class="line"></div>
+
+            <ul class="skills__list">
+
+                <li class="skills__list__item">
+                    <img src="/src/images/laptop.svg" alt="" class="skills__list__item-img">
+                    <p class="skills__list__item-title">Веб-дизайн</p>
+                    <p class="skills__list__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolorum officia inventore eum! Ullam assumenda eum impe.</p>
+                </li>
+
+                <li class="skills__list__item">
+                    <img src="/src/images/dev.svg" alt="" class="skills__list__item-img">
+                    <p class="skills__list__item-title">Разработка</p>
+                    <p class="skills__list__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolorum officia inventore eum! Ullam assumenda eum impe.</p>
+                </li>
+
+                <li class="skills__list__item">
+                    <img src="/src/images/ceo.svg" alt="" class="skills__list__item-img">
+                    <p class="skills__list__item-title">CEO-Оптимизация</p>
+                    <p class="skills__list__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolorum officia inventore eum! Ullam assumenda eum impe.</p>
+                </li>
+
+                <li class="skills__list__item">
+                    <img src="/src/images/marketing.svg" alt="" class="skills__list__item-img">
+                    <p class="skills__list__item-title">Маркетинг</p>
+                    <p class="skills__list__item-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae dolorum officia inventore eum! Ullam assumenda eum impe.</p>
+                </li>
+
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="case">
+        <div class="container">
+
             <h3 class="section__title">КЕЙСЫ</h3>
 
             <div class="line"></div>
 
-            <p class="skills__subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto facilis eos, aut necessitatibus ad esse error</p>
+            <p class="case__subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto facilis eos, aut necessitatibus ad esse error</p>
 
-            <div class="skills__slider">
-                <img src="" alt="" class="skills__slider-img">
-                <img src="" alt="" class="skills__slider-img">
-                <img src="" alt="" class="skills__slider-img">
+            <div class="case__slider">
+                <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
+                <img src="" alt="" class="case__slider-img">
+                <img src="" alt="" class="case__slider-img">
             </div>
 
-            <div class="skills__inner">
-                <div class="skills__inner__info">
-                    <h4 class="skills__inner__info-title">CLIENT:</h4>
-                    <p class="skills__inner__info__subtitle">Какая-то компания</p>
-                    <h4 class="skills__inner__info-title">WEBSITE:</h4>
-                    <p class="skills__inner__info__subtitle">http://www.somedomain.com</p>
+            <div class="case__inner">
+                <div class="case__inner__info">
+                    <h4 class="case__inner__info-title">CLIENT:</h4>
+                    <p class="case__inner__info-subtitle">Какая-то компания</p>
+                    <h4 class="case__inner__info-title">WEBSITE:</h4>
+                    <p class="case__inner__info-subtitle">http://www.somedomain.com</p>
 
-                    <button class="skills__inner__info__btn"><a href="VISIT LIVE SITE"></a></button>
+                    <button class="case__inner__info-btn"><a href="">VISIT LIVE SITE</a></button>
                 </div>
 
-                <div class="skills__inner__project">
-                    <h4 class="skills__inner__project-title">
+                <div class="case__inner__project">
+                    <h4 class="case__inner__project-title">
                         Название проекта
                     </h4>
 
-                    <p class="skills__inner__project-text">
+                    <p class="case__inner__project-text">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto incidunt minus labore nostrum, maxime hic. Cupiditate voluptate provident, perspiciatis ea repellat commodi vitae non consequatur saepe magnam qui, totam similique.
                     </p>
                 </div>
             </div>
 
-            <h2 class="Skills__price">
+            <h2 class="case__price">
                 Расчет стоимости
-            </h2>calc
+            </h2>
+            <div class="container2">
+                <h3 class="case__price-title">ТИП САЙТА</h3>
+                <select placeholder="Выберите пункт" name="list1" id="" class="case__price__dd">
+                    <option value="" class="case__price__dd-item">option1</option>
+                    <option value="" class="case__price__dd-item">option2</option>
+                    <option value="" class="case__price__dd-item">option3</option>
+                </select>
 
-            <h3 class="Skills__price-title">ТИП САЙТА</h3>
-            <select name="list1" id="" class="Skills__price__dd">
-                <option value="" class="Skills__price__dd-item">option1</option>
-                <option value="" class="Skills__price__dd-item">option2</option>
-                <option value="" class="Skills__price__dd-item">option3</option>
-            </select>
+                <h3 class="case__price-title">ДИЗАЙН</h3>
+                <select name="list2" id="" class="case__price__dd">
+                    <option value="" class="case__price__dd-item">option1</option>
+                    <option value="" class="case__price__dd-item">option2</option>
+                    <option value="" class="case__price__dd-item">option3</option>
+                </select>
 
-            <h3 class="Skills__price-title">ДИЗАЙН</h3>
-            <select name="list2" id="" class="Skills__price__dd">
-                <option value="" class="Skills__price__dd-item">option1</option>
-                <option value="" class="Skills__price__dd-item">option2</option>
-                <option value="" class="Skills__price__dd-item">option3</option>
-            </select>
+                <h3 class="case__price-title">АДАПТИВНОСТЬ</h3>
+                <select name="list3" id="" class="case__price__dd">
+                    <option value="" class="case__price__dd-item">option1</option>
+                    <option value="" class="case__price__dd-item">option2</option>
+                    <option value="" class="case__price__dd-item">option3</option>
+                </select>
 
-            <h3 class="Skills__price-title">АДАПТИВНОСТЬ</h3>
-            <select name="list3" id="" class="Skills__price__dd">
-                <option value="" class="Skills__price__dd-item">option1</option>
-                <option value="" class="Skills__price__dd-item">option2</option>
-                <option value="" class="Skills__price__dd-item">option3</option>
-            </select>
-
-            <div class="skills__line"></div>
-
-            <div class="skills__price__calc">
-                <span class="skills__price__calc-title">Сроки</span>
-                <span class="skills__price__calc-value">0</span>
+                <div class="case__line"></div>
+            </div>
+            <div class="case__price__calc">
+                <span class="case__price__calc-title">Сроки</span>
+                <span class="case__price__calc-value">0</span>
             </div>
 
-            <div class="skills__price__calc">
-                <span class="skills__price__calc-title">Стоимость</span>
-                <span class="skills__price__calc-value">0</span>
+            <div class="case__price__calc">
+                <span class="case__price__calc-title">Стоимость</span>
+                <span class="case__price__calc-value">0</span>
             </div>
 
         </div>
@@ -231,9 +273,11 @@
                     <input type="text" class="contacts__form-input">
                 </p>
                 <p>
-                    <input type="text" class="contacts__form-input">
-                </p>
+                    <textarea type="text" class="contacts__form-input">
 
+                    </textarea>
+                </p>
+                
                 <p><input value="Отправить"type="submit" class="contacts__form-btn"></p>
             </form>
 

@@ -1,0 +1,57 @@
+html{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+.body{
+    font-family: Calibri, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #3f495a;
+}
+
+.container{
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.container2{
+    max-width: 920px;
+    padding: 0 10px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+//цвета//
+$accent: #d17700;
+$title: #233042;
+$btn: #6f707e;
+
+
+//шрифты//
+$ff_title: Franklin Gothic Medium;
+$ff_subtitle: Bahnschrift;
+
+.section__title{
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: $title;
+    font-family: $ff_title;
+}
+
+.line{
+    height: 4px;
+    width: 72px;
+    background-color: $accent;
+    margin: 0 auto;
+    
+}
+
+
