@@ -150,6 +150,7 @@
             <div class="container2">
                 <h3 class="case__price-title">ТИП САЙТА</h3>
                 <select placeholder="Выберите пункт" name="list1" id="" class="case__price__dd">
+                    <option value="" class="case__price__dd-item">Выберите пункт...</option>
                     <option value="" class="case__price__dd-item">option1</option>
                     <option value="" class="case__price__dd-item">option2</option>
                     <option value="" class="case__price__dd-item">option3</option>
@@ -157,6 +158,7 @@
 
                 <h3 class="case__price-title">ДИЗАЙН</h3>
                 <select name="list2" id="" class="case__price__dd">
+                    <option value="" class="case__price__dd-item">Выберите пункт...</option>
                     <option value="" class="case__price__dd-item">option1</option>
                     <option value="" class="case__price__dd-item">option2</option>
                     <option value="" class="case__price__dd-item">option3</option>
@@ -164,6 +166,7 @@
 
                 <h3 class="case__price-title">АДАПТИВНОСТЬ</h3>
                 <select name="list3" id="" class="case__price__dd">
+                    <option value="" class="case__price__dd-item">Выберите пункт...</option>
                     <option value="" class="case__price__dd-item">option1</option>
                     <option value="" class="case__price__dd-item">option2</option>
                     <option value="" class="case__price__dd-item">option3</option>
@@ -186,36 +189,38 @@
 
     <section class="stats">
 
-        <h3 class="section__title">НЕМНОГО СТАТИСТИКИ</h3>
+        <div class="container">
+            <h3 class="section__title">НЕМНОГО СТАТИСТИКИ</h3>
 
         <div class="line"></div>
 
         <div class="stats__inner">
 
             <div class="stats__inner__item">
-                <img src="" alt="" class="stats__inner__item-img">
+                <img src="/src/images/smile.svg" alt="" class="stats__inner__item-img">
                 <h4 class="stats__inner__item-num">120</h4>
                 <p class="stats__inner__item-text">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
             </div>
 
             <div class="stats__inner__item">
-                <img src="" alt="" class="stats__inner__item-img">
+                <img src="/src/images/dev--accent.svg" alt="" class="stats__inner__item-img">
                 <h4 class="stats__inner__item-num">4,600</h4>
                 <p class="stats__inner__item-text">ЧАСОВ РАБОТЫ</p>
             </div>
 
             <div class="stats__inner__item">
-                <img src="" alt="" class="stats__inner__item-img">
+                <img src="/src/images/projects.svg" alt="" class="stats__inner__item-img">
                 <h4 class="stats__inner__item-num">340</h4>
                 <p class="stats__inner__item-text">ПРОЕКТОВ ЗАВЕРШЕНО  </p>
             </div>
 
             <div class="stats__inner__item">
-                <img src="" alt="" class="stats__inner__item-img">
+                <img src="/src/images/rewards.svg" alt="" class="stats__inner__item-img">
                 <h4 class="stats__inner__item-num">23</h4>
                 <p class="stats__inner__item-text">НАГРАД ПОЛУЧЕНО</p>
             </div>
 
+        </div>
         </div>
 
     </section>
@@ -229,9 +234,9 @@
 
             <div class="reviews__slider">
                     <div class="reviews__slider__item">
-                    <img src="" alt="" class="reviews__slider__item-img">
+                    <img src="/src/images/feedback.png" alt="" class="reviews__slider__item-img">
                     <p class="reviews__slider__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est id sed sit numquam magni quas rerum eaque </p>
-                    <p class="reviews__slider__item-info"></p>
+                    <p class="reviews__slider__item-info"><span>Михаил</span>, Ген директор ПАО "Газпром".</p>
                 </div>
             </div>
 
@@ -249,18 +254,18 @@
             
             <div class="contacts__info">
                 <div class="contacts__info__item">
-                    <img src="" alt="" class="contacts__info__item-img">
+                    <img src="/src/images/geo.svg" alt="" class="contacts__info__item-img">
                     <p class="contacts__info__item-text">Санкт-Петербург
                         Невский проспект 11</p>
                 </div>
 
                 <div class="contacts__info__item">
-                    <img src="" alt="" class="contacts__info__item-img">
+                    <img src="/src/images/mail.svg" alt="" class="contacts__info__item-img">
                     <p class="contacts__info__item-text">info@companyname.com </p>
                 </div>
 
                 <div class="contacts__info__item">
-                    <img src="" alt="" class="contacts__info__item-img">
+                    <img src="/src/images/phone.svg" alt="" class="contacts__info__item-img">
                     <p class="contacts__info__item-text">+7 999 999-99-99</p>
                 </div>
             </div>
@@ -268,14 +273,12 @@
             <h3 class="contacts__title">ОСТАВЬТЕ МНЕ СООБЩЕНИЕ</h3>
             
             <form action="#" class="contacts__form">
-                <p>
-                    <input type="text" class="contacts__form-input">
-                    <input type="text" class="contacts__form-input">
+                <p class="contacts__form-inputs">
+                    <input type="text" class="contacts__form-input" placeholder="Имя">
+                    <input type="text" class="contacts__form-input" placeholder="Email">
                 </p>
                 <p>
-                    <textarea type="text" class="contacts__form-input">
-
-                    </textarea>
+                    <textarea type="text" class="contacts__form-textarea" placeholder="Сообщение"></textarea>
                 </p>
                 
                 <p><input value="Отправить"type="submit" class="contacts__form-btn"></p>
