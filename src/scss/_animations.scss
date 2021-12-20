@@ -1,0 +1,51 @@
+@keyframes logo{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes headerInner{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@keyframes skills{
+    from{
+        opacity: 0;
+        margin-bottom: 80px;
+    }
+    to{
+        opacity: 1;
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes btnPulse{
+    from{
+        margin-left: 5px;
+        
+    }
+    to{
+        margin-left: 0px;
+        
+    }
+}
+
+@keyframes hotWheels{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+

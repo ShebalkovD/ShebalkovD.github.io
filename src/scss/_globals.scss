@@ -36,15 +36,29 @@ $btn: #6f707e;
 
 
 //шрифты//
+
+
+@font-face { 
+    font-family: 'Franklin Gothic Medium'; 
+    src:url(/src/fonts/framd.ttf)  format('truetype')         
+}
+@font-face { 
+    font-family: 'Bahnschrift'; 
+    src:url(/src/fonts/Bahnschrift.ttf)  format('truetype')         
+}
 $ff_title: Franklin Gothic Medium;
 $ff_subtitle: Bahnschrift;
 
+
 .section__title{
+    // display: inline-block;
+    margin: 0 auto;
     font-size: 34px;
     margin-bottom: 30px;
     color: $title;
     font-family: $ff_title;
     text-align: center;
+    letter-spacing: -2px;
 }
 
 .line{

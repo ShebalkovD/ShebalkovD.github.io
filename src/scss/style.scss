@@ -1,5 +1,10 @@
 @import "globals";
+@import "animations";
+@import "loader";
 
+ .main{
+     display: none;
+ }
 .header{
     width: 100%;
     height: 100vh;
@@ -7,11 +12,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 100px;
+    position: relative;
    &__nav{
+       opacity: 1;
+       position: fixed;
+    //    top: 0;
+        z-index: 10;
        width: 100%;
        height: 60px;
        background-color: #344051;
        color: #fff;
+       font-family: 'Franklin Gothic Medium';
        &__inner{
         display: flex;
         justify-content: space-between;
@@ -22,27 +33,42 @@
        &__logo{
            font-size: 24px;
            font-weight: 400;
+           animation: logo 2s;
+           
+           &:hover{
+               margin-top: -1px;
+           }
        }
 
        &__list{
            max-width: 540px;
            display: flex;
            justify-content: space-between;
+           font-family: 'Franklin Gothic Medium';
            &-item{
                font-size: 16px;
-               margin: 0 10px;  
+               margin: 0 15px;  
+               transition: all 0.2s;
+               &:hover{
+                   color: $accent;
+               }
+               &:active{
+                transform: scale(1.1);
+                }
            }
        }
    }
 
    &__inner{
-      margin-top: 35vh;
+      padding-top: 450px;
       max-width: 570px;
       text-align: center;
+      font-family: 'Franklin Gothic Medium';
+      animation: headerInner 1s;
       &-title{
           font-size: 80px;
           color: $title;
-          font-family: $ff_title;
+          
           margin-bottom: 30px;
     
         } 
@@ -64,6 +90,15 @@
            font-weight: 400;
            margin: 0 8px;
            text-align: center;
+           transition: all 0.2s;
+           &:hover{
+                border: 2px solid #344051;
+               background-color: #344051;
+               color: #fff;
+           }
+           &:active{
+               transform: scale(1.1);
+           }
            
        } 
 
@@ -95,11 +130,37 @@
         width: fit-content;
         border-radius: 5px;
         font-weight: 400;
+        padding-left: 31px;
+        position: relative;
+        transition: all 0.4s;
         &-img{
             height: 14px;
             width: 14px;
             margin-right: 5px;
         }
+        &::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            margin-top: 1px;
+            left: 10px;
+            top: 7px;
+            
+            background-image: url(/src/images/download.svg);
+        }
+        &:hover{
+            border: 2px solid #344051;
+           background-color: #344051;
+           color: #fff;
+        }
+        &:hover::before{
+            background-image: url(/src/images/download-white.svg);
+        }
+       &:active{
+           transform: scale(1.1);
+       }
     }
 }
 
@@ -108,14 +169,24 @@
     text-align: center;
     background-image: url(/src/images/skills--bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position: center;
+    background-size: 200%;
+    background-attachment: fixed;
     margin-bottom: 100px;
+    
+    & .section__title{
+        animation: skills 2s;
+    }
     &__list{
         margin-top: 100px;
         display: flex;
         justify-content: space-between;
         &__item{
             width: 212px;
+            transition: 1s;
+            &:hover{
+                scale: (1.1);
+            }
             &-img{
                 width: 48px;
                 height: 48px;
@@ -126,6 +197,7 @@
                 font-family: $ff_subtitle;
                 font-size: 18px;
                 margin-bottom: 20px;
+                font-weight: bold;
             }
         }
     }
@@ -177,6 +249,9 @@
                 width: fit-content;
                 border-radius: 5px;
                 font-weight: 400;
+                transition: all 2s;
+                animation: btnPulse 1s alternate;
+                animation-iteration-count: infinite;
             }
         }
         &__project{
@@ -197,11 +272,13 @@
         font-size: 44px;
         color: $title;
         margin-bottom: 60px;
+        font-family: $ff_title;
         &-title{
             font-size: 30px;
             color: $title;
             margin-bottom: 20px;
             text-align: left;
+            font-family: $ff_title;
         }
         &__dd{
             padding: 15px 10px;
@@ -235,6 +312,9 @@
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+    background-attachment: fixed;
     padding: 100px 0;
     &__inner{
         display: flex;
@@ -255,7 +335,7 @@
             &-num{
                 margin-bottom: 25px;
                 font-size: 28px;
-                font-weight: 600;
+                font-weight: bold;
             }
         }
     }
@@ -274,12 +354,15 @@
             justify-content: center;
             text-align: center;
             color: #243042;
+            animation: hotWheels 0.1s infinite linear;
             &-img{
                 width: 100px;
                 height: 100px;
                 margin: 0 auto;
                 margin-bottom: 40px;
-
+                transition: all 2s;
+                animation: hotWheels 0.1s infinite linear;
+                
             }
             &-text{
                 margin-bottom: 40px;
@@ -381,6 +464,14 @@
             border-radius: 5px;
             font-weight: 400;
             cursor: pointer;
+            transition: all 0.2s;
+            &:hover{
+                background-color: #fff;
+                color: #354051 ;
+            }
+            &:active{
+                transform: scale(1.1);
+            }
         }
 
     }

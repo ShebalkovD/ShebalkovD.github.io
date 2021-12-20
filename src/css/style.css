@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -29,12 +30,22 @@ html {
   position: relative;
 }
 
+@font-face {
+  font-family: "Franklin Gothic Medium";
+  src: url(/src/fonts/framd.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Bahnschrift";
+  src: url(/src/fonts/Bahnschrift.ttf) format("truetype");
+}
 .section__title {
+  margin: 0 auto;
   font-size: 34px;
   margin-bottom: 30px;
   color: #233042;
   font-family: Franklin Gothic Medium;
   text-align: center;
+  letter-spacing: -2px;
 }
 
 .line {
@@ -44,6 +55,140 @@ html {
   margin: 0 auto;
 }
 
+@-webkit-keyframes logo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes headerInner {
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+@keyframes headerInner {
+  from {
+    opacity: 0;
+    margin-left: -500px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+@-webkit-keyframes skills {
+  from {
+    opacity: 0;
+    margin-bottom: 80px;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+}
+@keyframes skills {
+  from {
+    opacity: 0;
+    margin-bottom: 80px;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+}
+@-webkit-keyframes btnPulse {
+  from {
+    margin-left: 5px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+@keyframes btnPulse {
+  from {
+    margin-left: 5px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+@-webkit-keyframes hotWheels {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes hotWheels {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.loader {
+  position: relative;
+  font-family: Franklin Gothic Medium;
+  font-size: 40px;
+  color: #344051;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+}
+.loader::after {
+  content: "…";
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  -webkit-animation: dots steps(4, end) 2s infinite;
+          animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@-webkit-keyframes dots {
+  to {
+    width: 45px;
+  }
+}
+
+@keyframes dots {
+  to {
+    width: 45px;
+  }
+}
+.main {
+  display: none;
+}
+
 .header {
   width: 100%;
   height: 100vh;
@@ -51,12 +196,17 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 100px;
+  position: relative;
 }
 .header__nav {
+  opacity: 1;
+  position: fixed;
+  z-index: 10;
   width: 100%;
   height: 60px;
   background-color: #344051;
   color: #fff;
+  font-family: "Franklin Gothic Medium";
 }
 .header__nav__inner {
   display: -webkit-box;
@@ -73,6 +223,11 @@ html {
 .header__nav__logo {
   font-size: 24px;
   font-weight: 400;
+  -webkit-animation: logo 2s;
+          animation: logo 2s;
+}
+.header__nav__logo:hover {
+  margin-top: -1px;
 }
 .header__nav__list {
   max-width: 540px;
@@ -82,20 +237,34 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: "Franklin Gothic Medium";
 }
 .header__nav__list-item {
   font-size: 16px;
-  margin: 0 10px;
+  margin: 0 15px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.header__nav__list-item:hover {
+  color: #d17700;
+}
+.header__nav__list-item:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .header__inner {
-  margin-top: 35vh;
+  padding-top: 450px;
   max-width: 570px;
   text-align: center;
+  font-family: "Franklin Gothic Medium";
+  -webkit-animation: headerInner 1s;
+          animation: headerInner 1s;
 }
 .header__inner-title {
   font-size: 80px;
   color: #233042;
-  font-family: Franklin Gothic Medium;
   margin-bottom: 30px;
 }
 .header__inner-subtitle {
@@ -118,6 +287,19 @@ html {
   font-weight: 400;
   margin: 0 8px;
   text-align: center;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.header__inner__btn:hover {
+  border: 2px solid #344051;
+  background-color: #344051;
+  color: #fff;
+}
+.header__inner__btn:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .about {
@@ -153,11 +335,40 @@ html {
   width: fit-content;
   border-radius: 5px;
   font-weight: 400;
+  padding-left: 31px;
+  position: relative;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .about__btn-img {
   height: 14px;
   width: 14px;
   margin-right: 5px;
+}
+.about__btn::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  margin-top: 1px;
+  left: 10px;
+  top: 7px;
+  background-image: url(/src/images/download.svg);
+}
+.about__btn:hover {
+  border: 2px solid #344051;
+  background-color: #344051;
+  color: #fff;
+}
+.about__btn:hover::before {
+  background-image: url(/src/images/download-white.svg);
+}
+.about__btn:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .skills {
@@ -165,8 +376,14 @@ html {
   text-align: center;
   background-image: url(/src/images/skills--bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center;
+  background-size: 200%;
+  background-attachment: fixed;
   margin-bottom: 100px;
+}
+.skills .section__title {
+  -webkit-animation: skills 2s;
+          animation: skills 2s;
 }
 .skills__list {
   margin-top: 100px;
@@ -179,6 +396,12 @@ html {
 }
 .skills__list__item {
   width: 212px;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+.skills__list__item:hover {
+  scale: 1.1;
 }
 .skills__list__item-img {
   width: 48px;
@@ -190,6 +413,7 @@ html {
   font-family: Bahnschrift;
   font-size: 18px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .case {
@@ -241,6 +465,13 @@ html {
   width: fit-content;
   border-radius: 5px;
   font-weight: 400;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+  -webkit-animation: btnPulse 1s alternate;
+          animation: btnPulse 1s alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .case__inner__project-title {
   font-size: 25px;
@@ -255,12 +486,14 @@ html {
   font-size: 44px;
   color: #233042;
   margin-bottom: 60px;
+  font-family: Franklin Gothic Medium;
 }
 .case__price-title {
   font-size: 30px;
   color: #233042;
   margin-bottom: 20px;
   text-align: left;
+  font-family: Franklin Gothic Medium;
 }
 .case__price__dd {
   padding: 15px 10px;
@@ -295,6 +528,9 @@ html {
   background-size: cover;
   width: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 150%;
+  background-attachment: fixed;
   padding: 100px 0;
 }
 .stats__inner {
@@ -327,7 +563,7 @@ html {
 .stats__inner__item-num {
   margin-bottom: 25px;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .reviews {
@@ -351,12 +587,19 @@ html {
           justify-content: center;
   text-align: center;
   color: #243042;
+  -webkit-animation: hotWheels 0.1s infinite linear;
+          animation: hotWheels 0.1s infinite linear;
 }
 .reviews__slider__item-img {
   width: 100px;
   height: 100px;
   margin: 0 auto;
   margin-bottom: 40px;
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+  -webkit-animation: hotWheels 0.1s infinite linear;
+          animation: hotWheels 0.1s infinite linear;
 }
 .reviews__slider__item-text {
   margin-bottom: 40px;
@@ -463,6 +706,18 @@ html {
   border-radius: 5px;
   font-weight: 400;
   cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.contacts__form-btn:hover {
+  background-color: #fff;
+  color: #354051;
+}
+.contacts__form-btn:active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .footer {
