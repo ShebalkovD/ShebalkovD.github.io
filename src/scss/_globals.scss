@@ -1,5 +1,10 @@
 html{
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:target{
+    scroll-margin-top: 100px;
 }
 
 *,*::before,*::after{

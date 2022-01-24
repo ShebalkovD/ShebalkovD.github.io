@@ -55,11 +55,11 @@
             }
         }
     }
-    .case{
-        &__inner{
-            margin-top: -100px;
-        }
+
+    .slick-arrow{
+        display: none;
     }
+    
     .stats{
         background-image: none;
         &__inner{
@@ -137,7 +137,7 @@
     }
     .case{
         &__inner{
-            margin-top: -50px;
+            // margin-top: -50px;
             flex-direction: column;
             justify-content: center;
             &__info{

@@ -28,12 +28,12 @@
                         <a href="#"  class="header__nav__logo">Андрей Браун</a>
 
                         <ul class="header__nav__list">
-                            <li class="header__nav__list-item"><a href="#">ОБО МНЕ</a></li>
-                            <li class="header__nav__list-item"><a href="#">УСЛУГИ</a></li>
-                            <li class="header__nav__list-item"><a href="#">КЕЙСЫ</a></li>
-                            <li class="header__nav__list-item"><a href="#">ПРАЙС</a></li>
-                            <li class="header__nav__list-item"><a href="#">ОТЗЫВЫ</a></li>
-                            <li class="header__nav__list-item"><a href="#">КОНТАКТЫ</a></li>
+                            <li class="header__nav__list-item"><a href="#about">ОБО МНЕ</a></li>
+                            <li class="header__nav__list-item"><a href="#skills">УСЛУГИ</a></li>
+                            <li class="header__nav__list-item"><a href="#case">КЕЙСЫ</a></li>
+                            <li class="header__nav__list-item"><a href="#case__price">ПРАЙС</a></li>
+                            <li class="header__nav__list-item"><a href="#reviews">ОТЗЫВЫ</a></li>
+                            <li class="header__nav__list-item"><a href="#contacts">КОНТАКТЫ</a></li>
                         </ul>
                         <div class="header__nav__btn-wrapper">
 
@@ -41,12 +41,12 @@
                         </div>
                         <div class="header__nav__burger">
                             <ul class="header__nav__burger__list">
-                                <li class="header__nav__burger__list-item"><a href="#">ОБО МНЕ</a></li>
-                                <li class="header__nav__burger__list-item"><a href="#">УСЛУГИ</a></li>
-                                <li class="header__nav__burger__list-item"><a href="#">КЕЙСЫ</a></li>
-                                <li class="header__nav__burger__list-item"><a href="#">ПРАЙС</a></li>
-                                <li class="header__nav__burger__list-item"><a href="#">ОТЗЫВЫ</a></li>
-                                <li class="header__nav__burger__list-item"><a href="#">КОНТАКТЫ</a></li>
+                                <li class="header__nav__burger__list-item"><a href="#about">ОБО МНЕ</a></li>
+                                <li class="header__nav__burger__list-item"><a href="#skills">УСЛУГИ</a></li>
+                                <li class="header__nav__burger__list-item"><a href="#case">КЕЙСЫ</a></li>
+                                <li class="header__nav__burger__list-item"><a href="#case__price">ПРАЙС</a></li>
+                                <li class="header__nav__burger__list-item"><a href="#reviews">ОТЗЫВЫ</a></li>
+                                <li class="header__nav__burger__list-item"><a href="#contacts">КОНТАКТЫ</a></li>
                             </ul>
                         </div> 
                     </div>
@@ -74,10 +74,10 @@
             
         </header>
 
-        <section class="about">
+        <section class="about" >
             <div class="container">
                 
-                <h3 class="section__title">ОБО МНЕ</h3>
+                <h3 class="section__title" id="about">ОБО МНЕ</h3>
 
                 <div class="line"></div>
 
@@ -87,7 +87,7 @@
                 <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis in id, excepturi rem fugiat adipisci ad quisquam consequuntur vero repudiandae exercitationem numquam. Fuga inventore minus ratione adipisci ipsa perferendis incidunt.</p>
 
                 <button class="about__btn">
-                    <a href="">
+                    <a href="#">
                     <span>Скачать резюме</span>
                     </a>
                 </button>
@@ -95,10 +95,10 @@
             </div>
         </section>
 
-        <section class="skills">
+        <section class="skills" >
             <div class="container">
 
-                <h3 class="section__title">ЧТО Я УМЕЮ</h3>
+                <h3 class="section__title" id="skills">ЧТО Я УМЕЮ</h3>
 
                 <div class="line"></div>
 
@@ -133,10 +133,10 @@
             </div>
         </section>
 
-        <section class="case">
+        <section class="case" >
             <div class="container">
 
-                <h3 class="section__title">КЕЙСЫ</h3>
+                <h3 class="section__title" id="case">КЕЙСЫ</h3>
 
                 <div class="line"></div>
 
@@ -144,8 +144,8 @@
 
                 <div class="case__slider">
                     <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
-                    <img src="" alt="" class="case__slider-img">
-                    <img src="" alt="" class="case__slider-img">
+                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
+                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
                 </div>
 
                 <div class="case__inner">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
 
-                <h2 class="case__price">
+                <h2 class="case__price" id="case__price">
                     Расчет стоимости
                 </h2>
                 <div class="container2">
@@ -200,7 +200,7 @@
                 </div>
                 <div class="case__price__calc">
                     <span class="case__price__calc-title">Сроки</span>
-                    <span class="case__price__calc-value">0</span>
+                    <span class="case__price__calc-value" id="priceTerm">0</span>
                 </div>
 
                 <div class="case__price__calc">
@@ -211,7 +211,7 @@
             </div>
         </section>
 
-        <section class="stats">
+        <section class="stats" id="stats">
 
             <div class="container">
                 <h3 class="section__title">НЕМНОГО СТАТИСТИКИ</h3>
@@ -222,25 +222,25 @@
 
                 <div class="stats__inner__item">
                     <img src="/src/images/smile.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num">120</h4>
+                    <h4 class="stats__inner__item-num" data-counter="1">0</h4>
                     <p class="stats__inner__item-text">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
                 </div>
 
                 <div class="stats__inner__item">
                     <img src="/src/images/dev--accent.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num">4,600</h4>
+                    <h4 class="stats__inner__item-num" data-counter="2">0</h4>
                     <p class="stats__inner__item-text">ЧАСОВ РАБОТЫ</p>
                 </div>
 
                 <div class="stats__inner__item">
                     <img src="/src/images/projects.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num">340</h4>
+                    <h4 class="stats__inner__item-num" data-counter="3">0</h4>
                     <p class="stats__inner__item-text">ПРОЕКТОВ ЗАВЕРШЕНО  </p>
                 </div>
 
                 <div class="stats__inner__item">
                     <img src="/src/images/rewards.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num">23</h4>
+                    <h4 class="stats__inner__item-num" data-counter="4">0</h4>
                     <p class="stats__inner__item-text">НАГРАД ПОЛУЧЕНО</p>
                 </div>
 
@@ -249,7 +249,7 @@
 
         </section>
 
-        <section class="reviews">
+        <section class="reviews" id="reviews">
             <div class="container">
 
                 <h3 class="section__title">ОТЗЫВЫ</h3>
@@ -257,17 +257,37 @@
                 <div class="line"></div>
 
                 <div class="reviews__slider">
-                        <div class="reviews__slider__item">
+
+                    <div class="reviews__slider__item">
                         <img src="/src/images/feedback.png" alt="" class="reviews__slider__item-img">
                         <p class="reviews__slider__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est id sed sit numquam magni quas rerum eaque </p>
                         <p class="reviews__slider__item-info"><span>Михаил</span>, Ген директор ПАО "Газпром".</p>
                     </div>
+
+                    <div class="reviews__slider__item">
+                        <img src="/src/images/feedback.png" alt="" class="reviews__slider__item-img">
+                        <p class="reviews__slider__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est id sed sit numquam magni quas rerum eaque </p>
+                        <p class="reviews__slider__item-info"><span>Михаил</span>, Ген директор ПАО "Газпром".</p>
+                    </div>
+
+                    <div class="reviews__slider__item">
+                        <img src="/src/images/feedback.png" alt="" class="reviews__slider__item-img">
+                        <p class="reviews__slider__item-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est id sed sit numquam magni quas rerum eaque </p>
+                        <p class="reviews__slider__item-info"><span>Михаил</span>, Ген директор ПАО "Газпром".</p>
+                    </div>
+
+                   
+
+                    
+
+                    
+
                 </div>
 
             </div>
         </section>
 
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
 
                 <h3 class="section__title">МОИ КОНТАКТЫ</h3>
@@ -327,6 +347,8 @@
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/slick.min.js"></script>
     <script src="/main.js"></script>
     <script src="/calc.js"></script>
 </body>
