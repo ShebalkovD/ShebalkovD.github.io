@@ -34,6 +34,9 @@
     .skills{
         background-image:none;
     }
+    .header__nav__btn-wrapper{
+        display: block;
+    }
 } 
 
 @media (max-width: 768px){
@@ -57,7 +60,8 @@
     }
 
     .slick-arrow{
-        display: none;
+        opacity: 0;
+        cursor: default;
     }
     
     .stats{

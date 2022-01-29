@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="/src/css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Page</title>
 </head>
@@ -16,7 +17,7 @@
         Загрузка
     </div> -->
 
-
+    
 
 
     <div class="main">
@@ -24,6 +25,14 @@
             
             <div class="header__nav">
                 <div class="container">
+                    <!-- // Окно с заманухой(30 с.) -->
+                    <div class="modal"> 
+                        <h3 class="modal__title">Первый заказ со скидкой!</h3>
+                
+                        <button class="modal__btn"><a href="#case" class="modal__link">Предложения</a></button>
+                        <button class="modal__btn"><a href="#case__price" class="modal__link">Рассчитать цену</a></button>
+                
+                    </div>
                     <div class="header__nav__inner">
                         <a href="#"  class="header__nav__logo">Андрей Браун</a>
 
@@ -74,7 +83,7 @@
             
         </header>
 
-        <section class="about" >
+        <section class="about section" id="about" >
             <div class="container">
                 
                 <h3 class="section__title" id="about">ОБО МНЕ</h3>
@@ -95,7 +104,7 @@
             </div>
         </section>
 
-        <section class="skills" >
+        <section class="skills section" id="section">
             <div class="container">
 
                 <h3 class="section__title" id="skills">ЧТО Я УМЕЮ</h3>
@@ -133,7 +142,7 @@
             </div>
         </section>
 
-        <section class="case" >
+        <section class="case section" >
             <div class="container">
 
                 <h3 class="section__title" id="case">КЕЙСЫ</h3>
@@ -143,9 +152,9 @@
                 <p class="case__subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto facilis eos, aut necessitatibus ad esse error</p>
 
                 <div class="case__slider">
-                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
-                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
-                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img">
+                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img" href ="/src/images/slider 1.jpg"   >
+                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img" href ="/src/images/slider 1.jpg">
+                    <img src="/src/images/slider 1.jpg" alt="" class="case__slider-img" href ="/src/images/slider 1.jpg">
                 </div>
 
                 <div class="case__inner">
@@ -169,7 +178,7 @@
                     </div>
                 </div>
 
-                <h2 class="case__price" id="case__price">
+                <h2 class="case__price section" id="case__price">
                     Расчет стоимости
                 </h2>
                 <div class="container2">
@@ -211,7 +220,7 @@
             </div>
         </section>
 
-        <section class="stats" id="stats">
+        <section class="stats section" id="stats" >
 
             <div class="container">
                 <h3 class="section__title">НЕМНОГО СТАТИСТИКИ</h3>
@@ -222,25 +231,25 @@
 
                 <div class="stats__inner__item">
                     <img src="/src/images/smile.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num" data-counter="1">0</h4>
+                    <h4 class="stats__inner__item-num" data-num="120">0</h4>
                     <p class="stats__inner__item-text">СЧАСТЛИВЫХ КЛИЕНТОВ</p>
                 </div>
 
                 <div class="stats__inner__item">
                     <img src="/src/images/dev--accent.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num" data-counter="2">0</h4>
+                    <h4 class="stats__inner__item-num" data-num="4600">0</h4>
                     <p class="stats__inner__item-text">ЧАСОВ РАБОТЫ</p>
                 </div>
 
                 <div class="stats__inner__item">
                     <img src="/src/images/projects.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num" data-counter="3">0</h4>
+                    <h4 class="stats__inner__item-num" data-num="340">0</h4>
                     <p class="stats__inner__item-text">ПРОЕКТОВ ЗАВЕРШЕНО  </p>
                 </div>
 
                 <div class="stats__inner__item">
                     <img src="/src/images/rewards.svg" alt="" class="stats__inner__item-img">
-                    <h4 class="stats__inner__item-num" data-counter="4">0</h4>
+                    <h4 class="stats__inner__item-num" data-num="23">0</h4>
                     <p class="stats__inner__item-text">НАГРАД ПОЛУЧЕНО</p>
                 </div>
 
@@ -249,7 +258,7 @@
 
         </section>
 
-        <section class="reviews" id="reviews">
+        <section class="reviews section" id="reviews">
             <div class="container">
 
                 <h3 class="section__title">ОТЗЫВЫ</h3>
@@ -287,7 +296,7 @@
             </div>
         </section>
 
-        <section class="contacts" id="contacts">
+        <section class="contacts section" id="contacts" >
             <div class="container">
 
                 <h3 class="section__title">МОИ КОНТАКТЫ</h3>
@@ -340,7 +349,7 @@
             </div>
         </section>
 
-        <section class="footer">
+        <section class="footer section" >
             <p class="footer__text">Copyright © 2021 Андрей Браун. Design by Web</p>
         </section>
 
@@ -349,7 +358,9 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/slick.min.js"></script>
+    <script src="/jquery.magnific-popup.min.js"></script>
     <script src="/main.js"></script>
     <script src="/calc.js"></script>
+    <script src="/numcount.js"></script>
 </body>
 </html>

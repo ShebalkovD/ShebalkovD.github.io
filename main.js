@@ -26,25 +26,6 @@ const burgerMenu = document.querySelector('.header__nav__burger')
 
 burgerBtn.onclick = () =>  burgerMenu.classList.toggle('active')
 
-// -----------Дз раздел 10-----------//
-
-// let book = {
-//     age: 3,
-//     name: 'cpp course'
-// }
-
-// console.log(book);
-// // копирование объектов
-// let bookTwo = Object.assign({}, book)
-
-// console.log(bookTwo);
-
-// // конструктор
-//     function Book (age, name){
-//         this.name = name; 
-//         this.age = age
-//     }
-// console.log(new Book(2, 'py course'));
 
 //----------------Слайдер----------------//
 
@@ -61,68 +42,125 @@ $('.reviews__slider').slick({
     
 });
 
+// Модальное окно 
 
-//-------------
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    let stats = document.querySelectorAll('.stats__inner__item-num')
-    let statsWrap = document.querySelector('.stats');
-    let scrollOffset = statsWrap.offsetTop; //расстояние до нужного элемента
-
-    const statsAnimate = () => {
-
-        let windowCenter = (window.innerHeight / 2) + window.scrollY; // центр страницы
-        
-        
-        
-        let statsArr = [120, 4600, 340, 23]// нужные значения
-
-            stats.forEach(el => {
-
-                if(windowCenter >= scrollOffset){ // Проверяем долистал ли польз. до элемента
-
-                    el.dataset.counter === "1" ? outNum(120, el) : 
-                    el.dataset.counter === "2" ? el.innerHTML = statsArr[1] : 
-                    el.dataset.counter === "3" ? el.innerHTML = statsArr[2] : 
-                    el.dataset.counter === "4" ? el.innerHTML = statsArr[3] : console.log();
-                   
-                    // 4 элемента статистики 
-                }else{
-                    el.innerHTML = 0
-                }
-
-                
-            })    
-    }
-
-    window.addEventListener('scroll', () =>{ //вызов функции при скроле
-        statsAnimate()
-        
-    })
+let modal = document.querySelector('.modal')
+const showOffer = () => {
     
+
+    setTimeout(() => {
+        modal.style.display = "block"
+    }, 5000);
+}
+
+showOffer()
+let modalBtn = document.querySelectorAll('.modal__btn');
+
+modalBtn.forEach(el => {
+    el.addEventListener('click', () => {
+        modal.style.display = "none"
+    })
+});
+
+
+// Анимация Nav меню при скролле
+
+
+$(document).ready(function(){
+    $(".case__slider-img").magnificPopup({type:'image'});   //Модальное окно с картинкой
+
+    $(window).scroll(() => {
+
+        let scrollDistance = $(window).scrollTop();
+
+        $(".section").each((i, el) => {
+            if($(el).offset().top - $(".header__nav").outerHeight() <= scrollDistance){
+                $(".header__nav__list-item").each((i, el) => {
+                    if($(el).hasClass("header__nav-active")){
+                        $(el).removeClass("header__nav-active");
+                    };
+                });
+
+                $('.header__nav__list-item:eq('+ i +')').addClass("header__nav-active")
+            }
+        })
+    })
 })
 
 
-//анимация счетчика
 
-let time = 10000
-let step = 10;
-let n = 0;
 
-function outNum(num, el){
-    let t = Math.round(time / (num / step)) // вычисление интервала  для соотв. значения
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------
+
+// document.addEventListener('DOMContentLoaded', () => {
+
     
-    let intr = setInterval(() => {
-        n += step;
-        if(n == num){
-            clearInterval(intr) // остановка интервала не работает, счетчик бесконечный
-        }
-        el.innerHTML = n;
-    }, t);
+   
 
+//     // const navAnimate = () => {
+//     //     let section = document.querySelectorAll('.section');
+//     //     let navItem = document.querySelectorAll('.header__nav__list-item');
+//     //     let windowCenter = (window.innerHeight / 2 ) + window.scrollY;
+//     //     // console.log(scrollDistance);
+//     //     section.forEach((i,el) => {
+//     //         let scrollOffset = el.offsetTop;
+//     //         if(windowCenter >= scrollOffset){
+
+//     //             navItem.forEach((i,el) => {
+//     //                 // if(el.classList.contains('.nav-active')){
+//     //                 //     el.classList.remove('.nav-active')
+//     //                 // }
+//     //                 el[i].classList.add('.nav-active')
+//     //             });
+//     //         }
+//     //     })
+
+//     // }
+
+
+
+
+//     window.addEventListener('scroll', () =>{ 
+        
+//         navAnimate()
+        
+//     })
     
-}
+// })
+
+
+
 
 
 

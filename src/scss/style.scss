@@ -27,6 +27,9 @@
        background-color: #344051;
        color: #fff;
        font-family: 'Franklin Gothic Medium';
+       &-active{
+           color: $accent;
+       }
        &__inner{
         display: flex;
         justify-content: space-between;
@@ -67,6 +70,7 @@
             background-color: #fff;
             position: relative;
             &-wrapper{
+                display: none;
                 position: absolute;
                 right: 10px;
                 cursor: pointer;
@@ -733,6 +737,55 @@
 
 .slick-list{
     overflow: hidden;
+}
+
+.modal{
+    display: none;
+    border-radius: 40px;
+    box-shadow: 0px 50px 200px 0px rgba(0,0,0,2) ;
+    background-color: #EFECF0;
+    width: 400px;
+    height: 400px;
+    font-family: Calibri, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+   text-align: center;
+    z-index: 10;
+    color: $title;
+    padding-top: 20px;
+    &__title{
+        font-size: 60px;
+        font-weight: 400;
+        margin-bottom: 150px;
+    }
+    &__btn{
+        font-size: 18px;
+        font-family: $ff_title;
+        background-color: transparent;
+        border: 2px solid #6d7682;
+        color: $btn;
+        padding: 5px 12px;
+        height: 40px;
+        width: fit-content;
+        border-radius: 5px;
+        font-weight: 400;
+        margin: 0 8px;
+        text-align: center;
+        transition: all 0.2s;
+        &:hover{
+             border: 2px solid #344051;
+            background-color: #344051;
+            color: #fff;
+        }
+        &:active{
+            transform: scale(1.1);
+        }
+    }
 }
 
 @import "adaptive";
