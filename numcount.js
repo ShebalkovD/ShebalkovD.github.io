@@ -1,39 +1,48 @@
-let stastsItems = document.querySelectorAll('.stats__inner__item-num')
-
-// //анимация счетчика
-
-// const time = 4000;
-// const step = 1;
-
-// let  outNum =(num, item) =>{
-//         let i = 1;
-//         let n = 0;
-//         let t = Math.round(time / (num / step))
-//         let intr = setInterval(() =>{
-//             item.textContent = n;
-//             n += step;
-//             if(n == num){
-//                 clearInterval(intr);
-//             }
-//         } ,t)
-
-// }
 
 
-let observer = new IntersectionObserver((item) => {
-   console.log(item.typeOf);
-   console.log("условие Observer");
+
+
+
+let option = {threshold: [1]};
+let observer = new IntersectionObserver(onEntry, option);
+let elemets = $(".stats__inner__item-num");
+elemets.each((i, el) => {
+
+observer.observe(el);
+// console.log(num);
+
+});
+
+function onEntry (entry){
+entry.forEach(change => {
+if(change.isIntersecting){  
+    let num = change.target.dataset.num;
+    let countTarget = change.target
+    console.log(num);
+    // console.log(el);
     
-},{threshold: 0.5})
+    const time = 1000
+    let step = 1
+    const outNum = (el, n) => { //анимация счетчика
+        if (n > 1000){
+            step = 10;
+        }
+        let i = 0;
+        let t = Math.round(time / (n / step));
+        let interval = setInterval(() => {
+            i = i + step;
+            if (i == n){
+                clearInterval(interval);
+            }
+            el.textContent = i;
+        }, t)
+    }
 
-
-
-stastsItems.forEach(item => {
-//    console.log(item);
-    observer.observe(item);
-
-    
-})
+    outNum(countTarget, num)
+   
+}
+});
+}
 
 
 
